@@ -16,7 +16,7 @@ var srcPath = path.resolve(__dirname, relativePath, 'src');
 var nodeModulesPath = path.join(__dirname, '..', 'node_modules');
 var indexHtmlPath = path.resolve(__dirname, relativePath, 'index.html');
 var faviconPath = path.resolve(__dirname, relativePath, 'favicon.ico');
-var buildPath = path.join(__dirname, isInNodeModules ? '../../..' : '..', 'build');
+var buildPath = path.join(__dirname, isInNodeModules ? '../../..' : '..', 'public');
 
 module.exports = {
   bail: true,
@@ -59,6 +59,11 @@ module.exports = {
         // https://github.com/webpack/css-loader/issues/281
         // We already have it thanks to postcss.
         loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!postcss')
+      },
+      {
+        test:/\.s(c|a)ss$/,
+        include: srcPath,
+        loaders: ['style', 'css?sourceMap!postcss', 'sass?sourceMap!postcss' ]
       },
       {
         test: /\.json$/,

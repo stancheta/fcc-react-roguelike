@@ -64,7 +64,7 @@ module.exports = {
       {
         test:/\.s(c|a)ss$/,
         include: srcPath,
-        loaders: ['style', 'css?sourceMap', 'sass?sourceMap' ]
+        loaders: ['style', 'css?sourceMap!postcss', 'sass?sourceMap!postcss' ]
       },
       {
         test: /\.json$/,
