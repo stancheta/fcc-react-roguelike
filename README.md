@@ -1,13 +1,15 @@
-# FCC-DataVis-Boilerplate
+# FCC-React-Roguelike-Game
 
-This is a simple boilerplate for the challenges on [FreeCodeCamp's](https://www.freecodecamp.com/)
- Data Visualization Path. It was made by ejecting Facebook/React team's fantastic
- [Create React App](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)
- and adding some extra lines on the Webpack config file to support SASS/SCSS.
+##Install##
 
- Here is a link to Create React App's original [README](https://github.com/facebookincubator/create-react-app/blob/master/README.md).  
+In order to start using this project, you can either clone it or download it as
+a zip file. After which, you need to install the dependencies of the project.
 
-I created this boilerplate in order to tackle freecodecamp's Data Visualization challenges, but it can now also be used for freecodecamp's Dynamic Web Application challenges with the addition of a basic express server.  If there's anything that you find to make this boilerplate better, feel free to make a pull request.
+Acquire node from the [Node.js website](https://nodejs.com/en/).
+
+Install the node_modules dependencies with `npm install`
+
+## How to Use
 
 npm scripts:
 `npm start` will start up a webpack server for developing a front end react app.
@@ -16,6 +18,30 @@ npm scripts:
 
 `npm run serve` will serve whatever is in the `public` folder on `localhost:8080` with an express server.
 
-`npm run prod` will build and then serve the project.
+`npm prod` will build and then serve the project.
 
-If you want to use the original datavis only boilerplate, then use the `datavis-only` branch.
+## Project Description
+
+FreeCodeCamp has a series of projects with increasingly complex [requirements](https://www.freecodecamp.com/challenges/build-a-roguelike-dungeon-crawler-game).
+This project uses React and SASS to create a roguelike dungeon crawler game.
+
+### Requirements
+1. I have health, a level, and a weapon. I can pick up a better weapon. I can pick up health items.
+2. All the items and enemies on the map are arranged at random.
+3. I can move throughout a map, discovering items.
+4. I can move anywhere within the map's boundaries, but I can't move through an enemy until I've beaten it.
+5. Much of the map is hidden. When I take a step, all spaces that are within a certain number of spaces from me are revealed.
+6. When I beat an enemy, the enemy goes away and I get XP, which eventually increases my level.
+7. When I fight an enemy, we take turns damaging each other until one of us loses. I do damage based off of my level and my weapon. The enemy does damage based off of its level. Damage is somewhat random within a range.
+8. When I find and beat the boss, I win.
+9. The game should be challenging, but theoretically winnable.
+
+### Technologies Used:
++ HTML5
++ SASS
++ Javascript
++ React
++ [Create React App](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)
+
+### Live Demo
+Coming Soon
