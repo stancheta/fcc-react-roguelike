@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import GameDashboard from './GameDashboard/GameDashboard';
 import './index.sass';
 
 ReactDOM.render(
-  <App />,
+  <GameDashboard />,
   document.getElementById('root')
 );
